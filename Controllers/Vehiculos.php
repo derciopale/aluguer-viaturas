@@ -44,7 +44,7 @@ class Vehiculos extends Controller{
         
         $fecha = date("YmdHis");
         if (empty($placa) || empty($marca) || empty($tipo) || empty($modelo)) {
-            $msg = array('msg' => 'Todo los campos son obligatorios', 'icono' => 'warning');
+            $msg = array('msg' => 'Todos os campos soo obligatorios', 'icono' => 'warning');
         }else{
             if (!empty($name)) {
                 $extension = pathinfo($name, PATHINFO_EXTENSION);
