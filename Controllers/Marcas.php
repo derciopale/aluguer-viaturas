@@ -33,23 +33,23 @@ class Marcas extends Controller
         $marca = strClean($_POST['nombre']);
         $id = strClean($_POST['id']);
         if (empty($marca)) {
-            $msg = array('msg' => 'El nombre es requerido', 'icono' => 'warning');
+            $msg = array('msg' => 'Introduza o nome', 'icono' => 'warning');
         } else {
             if ($id == "") {
                 $data = $this->model->registrarMarca($marca);
                 if ($data == "ok") {
-                    $msg = array('msg' => 'Marca registrado con éxito', 'icono' => 'success');
+                    $msg = array('msg' => 'Marca registada com sucesso', 'icono' => 'success');
                 } else if ($data == "existe") {
-                    $msg = array('msg' => 'La marca ya existe', 'icono' => 'warning');
+                    $msg = array('msg' => 'A marca ja existe', 'icono' => 'warning');
                 } else {
-                    $msg = array('msg' => 'Error al registrar', 'icono' => 'error');
+                    $msg = array('msg' => 'Erro ao registar', 'icono' => 'error');
                 }
             } else {
                 $data = $this->model->modificarMarca($marca, $id);
                 if ($data == "modificado") {
-                    $msg = array('msg' => 'Marca modificado', 'icono' => 'success');
+                    $msg = array('msg' => 'Marca modificada', 'icono' => 'success');
                 } else {
-                    $msg = array('msg' => 'Error al modificar', 'icono' => 'error');
+                    $msg = array('msg' => 'Erro ao modificar', 'icono' => 'error');
                 }
             }
         }
@@ -66,9 +66,9 @@ class Marcas extends Controller
     {
         $data = $this->model->accionMarca(0, $id);
         if ($data == 1) {
-            $msg = array('msg' => 'Marca dado de baja', 'icono' => 'success');
+            $msg = array('msg' => 'Eliminado com sucesso', 'icono' => 'success');
         } else {
-            $msg = array('msg' => 'Error al eliminar', 'icono' => 'error');
+            $msg = array('msg' => 'Error ao eliminar', 'icono' => 'error');
         }
         echo json_encode($msg, JSON_UNESCAPED_UNICODE);
         die();
@@ -77,9 +77,9 @@ class Marcas extends Controller
     {
         $data = $this->model->accionMarca(1, $id);
         if ($data == 1) {
-            $msg = array('msg' => 'Marca reingresado', 'icono' => 'success');
+            $msg = array('msg' => 'Marca re-inserida', 'icono' => 'success');
         } else {
-            $msg = array('msg' => 'Error la reingresar', 'icono' => 'error');
+            $msg = array('msg' => 'Erro ao re-inserir', 'icono' => 'error');
         }
         echo json_encode($msg, JSON_UNESCAPED_UNICODE);
         die();

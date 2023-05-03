@@ -10,7 +10,7 @@
             <thead class="bg-info text-white">
                 <tr>
                     <th>Id</th>
-                    <th>Nombre</th>
+                    <th>Nome</th>
                     <th>Estado</th>
                     <th></th>
                     <th></th>
@@ -25,7 +25,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header bg-info text-white">
-                <h5 class="modal-title" id="title"></h5>
+                <h5 class="modal-title" id="title">Nova marca</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form id="formulario" onsubmit="registrarMarca(event);" autocomplete="off">
@@ -46,17 +46,17 @@
                             <use xlink:href="#info-fill" />
                         </svg>
                         <div>
-                            Todo los campos con <span class="text-danger fw-bold">*</span> son obligatorio.
+                            Todos os campos com <span class="text-danger fw-bold">*</span> sao obrigatorio.
                         </div>
                     </div>
-                    <div class="form-floating mb-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="El nombre es requerido">
+                    <div class="form-floating mb-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Introduza o nome">
                         <input type="hidden" id="id" name="id">
-                        <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Nombre de la marca" required>
-                        <label for="nombre">Nombre <span class="text-danger fw-bold">*</span></label>
+                        <input id="nombre" class="form-control" type="text" name="Nome" placeholder="Nombre de la marca" required>
+                        <label for="nombre">Nome <span class="text-danger fw-bold">*</span></label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-outline-primary" type="submit" id="btnAccion">Registrar</button>
+                    <button class="btn btn-outline-primary" type="submit" id="btnAccion">Registar</button>
                     <button class="btn btn-outline-danger" type="button" data-bs-dismiss="modal">Cancelar</button>
                 </div>
             </form>

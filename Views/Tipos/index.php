@@ -11,7 +11,7 @@
                 <thead class="bg-info text-white">
                     <tr>
                         <th>Id</th>
-                        <th>Nombre</th>
+                        <th>Nome</th>
                         <th>Estado</th>
                         <th></th>
                         <th></th>
@@ -48,13 +48,13 @@
                             <use xlink:href="#info-fill" />
                         </svg>
                         <div>
-                            Todo los campos con <span class="text-danger fw-bold">*</span> son obligatorio.
+                            Todos os campos com <span class="text-danger fw-bold">*</span> sao obrigatorio.
                         </div>
                     </div>
-                    <div class="form-floating mb-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="El nombre es requerido">
+                    <div class="form-floating mb-3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tipo Obrigatorio">
                         <input type="hidden" id="id" name="id">
-                        <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Nombre del Tipo" required>
-                        <label for="nombre"><i class="fas fa-tags"></i> Nombre <span class="text-danger fw-bold">*</span></label>
+                        <input id="nombre" class="form-control" type="text" name="nombre" placeholder="Tipo" required>
+                        <label for="nombre"><i class="fas fa-tags"></i> Nome <span class="text-danger fw-bold">*</span></label>
                     </div>
 
                 </div>
